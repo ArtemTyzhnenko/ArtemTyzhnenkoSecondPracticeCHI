@@ -232,7 +232,7 @@ main {
   .blog ul li .comments:nth-child(2) {
     padding-top: 0; }
   .blog ul li .comments:nth-child(4) {
-    padding-bottom: 11px; }
+    padding-bottom: 10px; }
   .blog ul li .comments span {
     color: #fff; }
   .blog ul li a {
@@ -240,9 +240,7 @@ main {
     font-family: Arial;
     color: #00b0e2;
     padding-top: 6px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    float: right;
     line-height: 18px; }
 
 .contacts {

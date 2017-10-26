@@ -282,7 +282,7 @@ main {
     padding-top: 0;
   }
   ul li .comments:nth-child(4) {
-    padding-bottom: 11px;
+    padding-bottom: 10px;
   }
   ul li .comments span {
     color: #fff;
@@ -292,9 +292,10 @@ main {
     font-family: Arial;
     color: #00b0e2;
     padding-top: 6px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    //display: flex;
+    //flex-direction: row;
+    //justify-content: flex-end;
+    float: right;
     line-height: 18px;
   }
 }
