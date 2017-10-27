@@ -53,6 +53,7 @@ header {
     color: #ffffff;
     outline: none;
     line-height: 18px;
+    font-family: Arial;
   }
   button:hover {
     cursor: pointer;
@@ -94,27 +95,27 @@ header {
 //HEADER END
 
 //MAIN BEGIN
-main {
-  background-color: #eee;
+.mainContentWrapper {
+  background-color: #eee  ;
   border-top: 1px solid #fff;
 }
 
 .mainContent {
-  z-index: -1000;
   .title {
     background: linear-gradient(#646464, #020202);
-  }
-  h2 {
-    z-index: 1;
-    position: relative;
-    font-size: 44px;
-    font-weight: normal;
-    padding-bottom: 16px;
-    padding-top: 23px;
-    font-family: "Stymie XBd BT";
-    letter-spacing: -5px;
-    background: #eeeeee;
-    mix-blend-mode: lighten;
+
+    h2 {
+      z-index: 1;
+      position: relative;
+      font-size: 44px;
+      font-weight: normal;
+      padding-bottom: 16px;
+      padding-top: 23px;
+      font-family: "Stymie XBd BT";
+      letter-spacing: -5px;
+      background: #eeeeee;
+      mix-blend-mode: lighten;
+    }
   }
   .firstRow {
     display: flex;
@@ -213,9 +214,8 @@ main {
   }
 }
 
-//MAIN END
 
-//FOOTER BEGIN
+
 .blog {
   padding-top: 5px;
   padding-bottom: 27px;
@@ -299,6 +299,10 @@ main {
     line-height: 18px;
   }
 }
+//MAIN END
+
+//FOOTER BEGIN
+
 
 .contacts {
   padding-top: 25px;

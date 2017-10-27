@@ -45,7 +45,8 @@ header {
     font-weight: bold;
     color: #ffffff;
     outline: none;
-    line-height: 18px; }
+    line-height: 18px;
+    font-family: Arial; }
   .searchForm button:hover {
     cursor: pointer; }
   .searchForm button:active {
@@ -76,15 +77,13 @@ header {
       position: relative;
       z-index: 2; }
 
-main {
+.mainContentWrapper {
   background-color: #eee;
   border-top: 1px solid #fff; }
 
-.mainContent {
-  z-index: -1000; }
-  .mainContent .title {
-    background: linear-gradient(#646464, #020202); }
-  .mainContent h2 {
+.mainContent .title {
+  background: linear-gradient(#646464, #020202); }
+  .mainContent .title h2 {
     z-index: 1;
     position: relative;
     font-size: 44px;
@@ -95,48 +94,48 @@ main {
     letter-spacing: -5px;
     background: #eeeeee;
     mix-blend-mode: lighten; }
-  .mainContent .firstRow {
-    display: flex;
-    align-items: flex-start;
-    padding-bottom: 10px; }
-  .mainContent ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start; }
-  .mainContent ul li {
-    box-sizing: border-box;
-    width: 310px;
-    padding: 29px;
-    background-color: #fff;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column; }
-  .mainContent ul li img {
-    box-sizing: border-box;
-    padding: 4px;
-    background-color: #f8f8f8;
-    border: 1px solid #ebebeb;
-    width: 250px;
-    height: 160px;
-    align-self: center; }
-  .mainContent ul li h3 {
-    font-size: 24px;
-    line-height: 24px;
-    font-family: Arial;
-    font-weight: bold;
-    padding-top: 5px;
-    padding-bottom: 9px;
-    border-bottom-width: 1px;
-    border-bottom-style: dashed;
-    border-bottom-color: #cccccc; }
-  .mainContent ul li p {
-    font-size: 12px;
-    line-height: 18px;
-    font-family: Arial;
-    padding-top: 10px; }
+.mainContent .firstRow {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 10px; }
+.mainContent ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start; }
+.mainContent ul li {
+  box-sizing: border-box;
+  width: 310px;
+  padding: 29px;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; }
+.mainContent ul li img {
+  box-sizing: border-box;
+  padding: 4px;
+  background-color: #f8f8f8;
+  border: 1px solid #ebebeb;
+  width: 250px;
+  height: 160px;
+  align-self: center; }
+.mainContent ul li h3 {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: Arial;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 9px;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #cccccc; }
+.mainContent ul li p {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: Arial;
+  padding-top: 10px; }
 
 .numberingOfPage {
   display: flex;
