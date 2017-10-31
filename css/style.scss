@@ -1,15 +1,18 @@
 body {
   width: 100%;
+  background: #eeeeee;
 }
-.clearfix{
+
+.clearfix {
   content: "";
   display: table;
   clear: both;
 }
+
 //HEADER BEGIN
 header {
   background-color: #000;
-  background: url("../img/headerBG.jpg") repeat-x;
+  background: url("../img/headerBG.jpg") 15px 0 repeat-x;
 }
 
 .wrapper {
@@ -17,21 +20,22 @@ header {
   margin: 0 auto;
 }
 
-.topHead {
-  padding-top: 23px;
-  padding-left: 3px;
-  padding-bottom: 29px;
+.top-head {
+  padding: 22px 0 30px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  a {
+  .logo {
     background: url(../img/logo.png);
     width: 260px;
     height: 58px;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: block;
   }
 }
 
-.searchForm {
+.search-form {
   form {
     width: 235px;
     height: 27px;
@@ -39,12 +43,15 @@ header {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: inset 3px 3px 0 0 #eee;
+    margin-right: 2px;
     input {
-      width: 160px;
+      width: 150px;
       height: 27px;
       background: none;
       border: none;
-      padding-left: 5px;
+      font-size: 12px;
+      padding: 8px 5px 5px 5px;
+      line-height: 16px;
     }
     button {
       width: 75px;
@@ -56,45 +63,57 @@ header {
       font-weight: bold;
       color: #ffffff;
       outline: none;
-      line-height: 18px;
+      line-height: 15px;
       font-family: Arial;
       float: right;
-      padding-right: 13px;
+      padding-right: 11px;
     }
-    button:hover {
-      cursor: pointer;
-    }
-    button:active {
-      background-color: #0488b6;
-    }
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  button:active {
+    background-color: #0488b6;
   }
 }
 
-.bottomHead {
+.bottom-head {
   background-color: #00afe1;
   width: 100%;
-  height: 51px;
+  border-top: 1px solid #33c0e8;
   ul {
     display: flex;
     justify-content: space-between;
     background-color: #00afe1;
-    border-top: 1px solid #33c0e8;
+
     a {
       color: #fff;
-      padding: 17px 17px;
+      padding: 18px 17px;
       display: block;
       font-weight: bold;
       font-size: 13px;
       font-family: Arial;
+      position: relative;
+      box-sizing: border-box;
     }
     a:hover {
       background: linear-gradient(to bottom, #1a1a1a, #343434);
-      padding: 18px 17px 32px 17px;
-      border-bottom-right-radius: 5px;
-      border-bottom-left-radius: 5px;
+      padding-top: 19px;
       margin-top: -1px;
       position: relative;
-      z-index: 2;
+
+    }
+    a:hover:after {
+      width: 100%;
+      content: '';
+      display: block;
+      height: 10px;
+      border-radius: 0 0 5px 5px;
+      background: #343434;
+      position: absolute;
+      z-index: 20;
+      left: 0;
+      top: 50px;
     }
   }
 }
@@ -102,15 +121,15 @@ header {
 //HEADER END
 
 //MAIN BEGIN
-.mainContentWrapper {
-  background-color: #eee;
+.main-content-wrapper {
+  position: relative;
+  z-index: 1;
   border-top: 1px solid #fff;
 }
 
-.mainContent {
+.main-content {
   .title {
     background: linear-gradient(#646464, #020202);
-
     h2 {
       z-index: 1;
       position: relative;
@@ -119,15 +138,14 @@ header {
       padding-bottom: 16px;
       padding-top: 23px;
       font-family: "Stymie XBd BT";
-      letter-spacing: -5px;
+      word-spacing: -8px;
       background: #eeeeee;
       mix-blend-mode: lighten;
     }
   }
-  .firstRow {
+  .main-blog {
     display: flex;
     align-items: flex-start;
-    padding-bottom: 10px;
   }
   ul {
     display: flex;
@@ -145,6 +163,7 @@ header {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
   }
   ul li img {
     box-sizing: border-box;
@@ -154,50 +173,49 @@ header {
     width: 250px;
     height: 160px;
     align-self: center;
+    margin: 0 0 6px 0;
   }
   ul li h3 {
     font-size: 24px;
-    line-height: 24px;
+    line-height: 25px;
     font-family: Arial;
     font-weight: bold;
-    padding-top: 5px;
-    padding-bottom: 9px;
-    border-bottom-width: 1px;
-    border-bottom-style: dashed;
-    border-bottom-color: #cccccc;
+    margin-bottom: 9px;
   }
   ul li p {
     font-size: 12px;
     line-height: 18px;
     font-family: Arial;
-    padding-top: 10px;
-
+    padding-top: 8px;
+    border-top-width: 1px;
+    border-top-style: dashed;
+    border-top-color: #cccccc;
   }
 }
 
-.numberingOfPage {
+.numbering-of-page {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 20px;
-  padding-bottom: 33px;
-  .buttonOfPage {
+  padding-top: 9px;
+  padding-bottom: 32px;
+  button:last-child {
+    width: 92px;
+  }
+  button {
     width: 115px;
     height: 24px;
     font-size: 12px;
+    line-height: 16px;
     background-color: #00b0e2;
     border-width: 0;
     cursor: pointer;
     color: #fff;
     outline: none;
     text-align: center;
-    line-height: 24px;
   }
-  .buttonOfPage:last-child {
-    width: 92px;
-  }
-  .buttonOfPage:active {
+  button:active {
     background-color: #0488b6;
   }
   ul {
@@ -210,12 +228,15 @@ header {
       a {
         display: block;
         font-size: 12px;
-        padding: 7px 10px 5px 11px;
+        line-height: 15px;
+        padding: 6px 10px 4px 10px;
         color: #777777;
+        font-family: Arial;
       }
-      .active{
+      .active {
         background-color: #1e1e1e;
         cursor: default;
+        color: #fff;
       }
       a:hover {
         background-color: #1e1e1e;
@@ -231,81 +252,78 @@ header {
   border-bottom: 1px solid #292929;
   background-color: #1e1e1e;
   box-shadow: inset 0 10px 10px 0 #030303;
-  ul {
+  .wrapper {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
     flex-direction: row;
     align-items: flex-start;
-    li {
+    .article-blocks {
       width: 277px;
-      padding: 0 19px;
-      display: flex;
-      flex-direction: column;
-      h3 {
-        font-size: 24px;
-        line-height: 48px;
-        font-family: "Stymie XBd BT";
-        font-weight: bold;
+      header {
+        background-color: #1e1e1e;
+        background: none;
+        padding-bottom: 9px;
+        margin-bottom: 9px;
+        border-bottom: 1px;
+        border-bottom-style: dashed;
+        border-bottom-color: #cccccc;
+        h3 {
+          font: 24px/47px "Stymie XBd BT";
+          color: #fff;
+          font-weight: bold;
+        }
+        p {
+          font: 12px/18px Arial;
+          color: #acacac;
+          span {
+            color: #00b0e2;
+          }
+        }
+      }
+      .main {
+        padding-bottom: 10px;
+        margin-bottom: 6px;
+        border-bottom-width: 1px;
+        border-bottom-style: dashed;
+        border-bottom-color: #cccccc;
+        p {
+          font: 12px/18px Arial;
+          color: #acacac;
+        }
+      }
+      footer {
+        float: right;
+        a {
+          color: #00b0e2;
+          font: 12px/18px Arial;
+        }
+      }
+    }
+    .comments {
+      header {
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      p {
+        font: 12px/18px Arial;
+        color: #acacac;
+        padding: 9px 0 9px 0;
+        border-bottom-width: 1px;
+        border-bottom-style: dashed;
+        border-bottom-color: #cccccc;
+      }
+      p:first-child{
+        padding: 0 0 8px 0;
+      }
+      p:last-child{
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+      span {
         color: #fff;
       }
     }
-  }
-  ul li .description {
-    font-size: 12px;
-    font-family: Arial;
-    padding-bottom: 8px;
-    border-bottom-width: 1px;
-    border-bottom-style: dashed;
-    border-bottom-color: #cccccc;
-    color: #fff;
-    line-height: 18px;
-  }
-  ul li .article {
-    font-size: 12px;
-    font-family: Arial;
-    padding-top: 9px;
-    padding-bottom: 11px;
-    line-height: 18px;
-    color: #ffffff;
-    border-bottom-width: 1px;
-    border-bottom-style: dashed;
-    border-bottom-color: #cccccc;
-  }
-  ul li span {
-    color: #00b0e2;
-    font-weight: bold;
-  }
-  ul li .comments {
-    font-size: 12px;
-    font-family: Arial;
-    padding-bottom: 8px;
-    padding-top: 9px;
-    border-bottom-width: 1px;
-    border-bottom-style: dashed;
-    border-bottom-color: #cccccc;
-    color: #fff;
-    line-height: 18px;
-  }
-  ul li .comments:nth-child(2) {
-    padding-top: 0;
-  }
-  ul li .comments:nth-child(4) {
-    padding-bottom: 10px;
-  }
-  ul li .comments span {
-    color: #fff;
-  }
-  ul li a {
-    font-size: 12px;
-    font-family: Arial;
-    color: #00b0e2;
-    padding-top: 6px;
-    //display: flex;
-    //flex-direction: row;
-    //justify-content: flex-end;
-    float: right;
-    line-height: 18px;
   }
 }
 
@@ -322,9 +340,7 @@ header {
     line-height: 18px;
     font-family: Arial;
     color: #666666;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 }
 
